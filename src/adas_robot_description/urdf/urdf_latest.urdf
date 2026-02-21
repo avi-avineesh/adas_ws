@@ -41,7 +41,7 @@
     <origin xyz="-0.131112109546006 0.142499999999999 -0.028999999999994" rpy="-1.5707963267949 0 0" />
     <parent link="base_link" />
     <child link="left_rear" />
-    <axis xyz="0 0 -1" />
+    <axis xyz="0 0 1" />
     <limit effort="10" velocity="10" />
     <dynamics damping="1.0" friction="0.5" />
   </joint>
