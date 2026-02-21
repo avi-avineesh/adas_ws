@@ -2,612 +2,488 @@
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
-<robot
-  name="urdf_latest">
-  <link
-    name="base_link">
+<robot name="urdf_latest">
+
+  <link name="base_link">
     <inertial>
-      <origin
-        xyz="-0.000231100476171808 6.21990214888513E-09 -0.0148754815796431"
-        rpy="0 0 0" />
-      <mass
-        value="0.723731533085621" />
-      <inertia
-        ixx="0.00273550214547189"
-        ixy="-4.84629719487281E-10"
-        ixz="0.00048548168745002"
-        iyy="0.00771136853796671"
-        iyz="1.27964592506478E-10"
-        izz="0.0102201832153108" />
+      <origin xyz="-0.000231100476171808 6.21990214888513E-09 -0.0148754815796431" rpy="0 0 0" />
+      <mass value="0.723731533085621" />
+      <inertia ixx="0.00273550214547189" ixy="-4.84629719487281E-10" ixz="0.00048548168745002"
+               iyy="0.00771136853796671" iyz="1.27964592506478E-10" izz="0.0102201832153108" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/base_link.STL" />
+        <mesh filename="package://adas_robot_description/meshes/base_link.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/base_link.STL" />
+        <mesh filename="package://adas_robot_description/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
-  <link
-    name="left_rear">
+
+  <link name="left_rear">
     <inertial>
-      <origin
-        xyz="3.10904498124209E-06 5.37279659429402E-06 -0.0120230697296975"
-        rpy="0 0 0" />
-      <mass
-        value="0.126363111272001" />
-      <inertia
-        ixx="7.94253978332532E-05"
-        ixy="1.60497325337193E-09"
-        ixz="2.88800419661742E-09"
-        iyy="7.94272648265278E-05"
-        iyz="5.03999377505508E-09"
-        izz="0.00013565032153422" />
+      <origin xyz="3.10904498124209E-06 5.37279659429402E-06 -0.0120230697296975" rpy="0 0 0" />
+      <mass value="0.126363111272001" />
+      <inertia ixx="7.94253978332532E-05" ixy="1.60497325337193E-09" ixz="2.88800419661742E-09"
+               iyy="7.94272648265278E-05" iyz="5.03999377505508E-09" izz="0.00013565032153422" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/left_rear.STL" />
+        <mesh filename="package://adas_robot_description/meshes/left_rear.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.827450980392157 0.666666666666667 0.129411764705882 1" />
+      <material name="">
+        <color rgba="0.827450980392157 0.666666666666667 0.129411764705882 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/left_rear.STL" />
+        <mesh filename="package://adas_robot_description/meshes/left_rear.STL" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="leftrear"
-    type="continuous">
-    <origin
-      xyz="-0.131112109546006 0.142499999999999 -0.028999999999994"
-      rpy="-1.5707963267949 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="left_rear" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      effort="10"
-      velocity="10" />
-    <dynamics
-      damping="0.1"
-      friction="0.1" />
+
+  <joint name="leftrear" type="continuous">
+    <origin xyz="-0.131112109546006 0.142499999999999 -0.028999999999994" rpy="-1.5707963267949 0 0" />
+    <parent link="base_link" />
+    <child link="left_rear" />
+    <axis xyz="0 0 -1" />
+    <limit effort="10" velocity="10" />
+    <dynamics damping="0.1" friction="0.1" />
   </joint>
-  <link
-    name="right_rear">
+
+  <link name="right_rear">
     <inertial>
-      <origin
-        xyz="5.37279659434953E-06 3.10904498124209E-06 0.0120230697296975"
-        rpy="0 0 0" />
-      <mass
-        value="0.126363111272001" />
-      <inertia
-        ixx="7.94272648265279E-05"
-        ixy="1.6049732533684E-09"
-        ixz="-5.03999377510644E-09"
-        iyy="7.94253978332533E-05"
-        iyz="-2.88800419664162E-09"
-        izz="0.00013565032153422" />
+      <origin xyz="5.37279659434953E-06 3.10904498124209E-06 0.0120230697296975" rpy="0 0 0" />
+      <mass value="0.126363111272001" />
+      <inertia ixx="7.94272648265279E-05" ixy="1.6049732533684E-09" ixz="-5.03999377510644E-09"
+               iyy="7.94253978332533E-05" iyz="-2.88800419664162E-09" izz="0.00013565032153422" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/right_rear.STL" />
+        <mesh filename="package://adas_robot_description/meshes/right_rear.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.827450980392157 0.666666666666667 0.129411764705882 1" />
+      <material name="">
+        <color rgba="0.827450980392157 0.666666666666667 0.129411764705882 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/right_rear.STL" />
+        <mesh filename="package://adas_robot_description/meshes/right_rear.STL" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="rightrear"
-    type="continuous">
-    <origin
-      xyz="-0.131112109546005 -0.142499999999999 -0.0289999999999937"
-      rpy="-1.5707963267949 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="right_rear" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      effort="10"
-      velocity="10" />
-    <dynamics
-      damping="0.1"
-      friction="0.1" />
+
+  <joint name="rightrear" type="continuous">
+    <origin xyz="-0.131112109546005 -0.142499999999999 -0.0289999999999937" rpy="-1.5707963267949 0 0" />
+    <parent link="base_link" />
+    <child link="right_rear" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" />
+    <dynamics damping="0.1" friction="0.1" />
   </joint>
-  <link
-    name="left_front_knuckle">
+
+  <link name="left_front_knuckle">
     <inertial>
-      <origin
-        xyz="-0.0069195085927054 -0.00186567476953692 7.17221471102647E-09"
-        rpy="0 0 0" />
-      <mass
-        value="0.0030084981775693" />
-      <inertia
-        ixx="1.25491838679359E-07"
-        ixy="-1.00786553248517E-07"
-        ixz="-1.81410099511428E-13"
-        iyy="3.82810606265697E-07"
-        iyz="-2.84698744470842E-14"
-        izz="4.2336400843231E-07" />
+      <origin xyz="-0.0069195085927054 -0.00186567476953692 7.17221471102647E-09" rpy="0 0 0" />
+      <mass value="0.0030084981775693" />
+      <inertia ixx="1.25491838679359E-07" ixy="-1.00786553248517E-07" ixz="-1.81410099511428E-13"
+               iyy="3.82810606265697E-07" iyz="-2.84698744470842E-14" izz="4.2336400843231E-07" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/left_front_knuckle.STL" />
+        <mesh filename="package://adas_robot_description/meshes/left_front_knuckle.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/left_front_knuckle.STL" />
+        <mesh filename="package://adas_robot_description/meshes/left_front_knuckle.STL" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="leftfrontknuckle"
-    type="continuous">
-    <origin
-      xyz="0.169376641305686 0.11535109122836 -0.029000000051664"
-      rpy="0 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="left_front_knuckle" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      effort="10"
-      velocity="10" />
-    <dynamics
-      damping="0.1"
-      friction="0.1" />
+
+  <joint name="leftfrontknuckle" type="continuous">
+    <origin xyz="0.169376641305686 0.11535109122836 -0.029000000051664" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="left_front_knuckle" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" />
+    <dynamics damping="0.1" friction="0.1" />
   </joint>
-  <link
-    name="left_front">
+
+  <link name="left_front">
     <inertial>
-      <origin
-        xyz="-0.00986676609693737 5.24995502093617E-06 -0.0101569567833888"
-        rpy="0 0 0" />
-      <mass
-        value="0.126363111272001" />
-      <inertia
-        ixx="7.94255405774487E-05"
-        ixy="-1.67990050048856E-09"
-        ixz="-3.1203197493381E-09"
-        iyy="7.94271220823325E-05"
-        iyz="4.89956224317293E-09"
-        izz="0.00013565032153422" />
+      <origin xyz="-0.00986676609693737 5.24995502093617E-06 -0.0101569567833888" rpy="0 0 0" />
+      <mass value="0.126363111272001" />
+      <inertia ixx="7.94255405774487E-05" ixy="-1.67990050048856E-09" ixz="-3.1203197493381E-09"
+               iyy="7.94271220823325E-05" iyz="4.89956224317293E-09" izz="0.00013565032153422" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/left_front.STL" />
+        <mesh filename="package://adas_robot_description/meshes/left_front.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/left_front.STL" />
+        <mesh filename="package://adas_robot_description/meshes/left_front.STL" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="leftfront"
-    type="continuous">
-    <origin
-      xyz="0.00937470298400156 0.025282795825291 0"
-      rpy="-1.5707963267949 0 0" />
-    <parent
-      link="left_front_knuckle" />
-    <child
-      link="left_front" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      effort="10"
-      velocity="10" />
-    <dynamics
-      damping="0.1"
-      friction="0.1" />
+
+  <joint name="leftfront" type="continuous">
+    <origin xyz="0.00937470298400156 0.025282795825291 0" rpy="-1.5707963267949 0 0" />
+    <parent link="left_front_knuckle" />
+    <child link="left_front" />
+    <axis xyz="0 0 -1" />
+    <limit effort="10" velocity="10" />
+    <dynamics damping="0.1" friction="0.1" />
   </joint>
-  <link
-    name="right_front_knuckle">
+
+  <link name="right_front_knuckle">
     <inertial>
-      <origin
-        xyz="-0.00687145694189439 0.0022731090372714 -7.17204329259147E-09"
-        rpy="0 0 0" />
-      <mass
-        value="0.00300849817756922" />
-      <inertia
-        ixx="1.25491838679379E-07"
-        ixy="1.00786553248544E-07"
-        ixz="1.81410096406909E-13"
-        iyy="3.82810606265668E-07"
-        iyz="-2.8469873122496E-14"
-        izz="4.23364008432305E-07" />
+      <origin xyz="-0.00687145694189439 0.0022731090372714 -7.17204329259147E-09" rpy="0 0 0" />
+      <mass value="0.00300849817756922" />
+      <inertia ixx="1.25491838679379E-07" ixy="1.00786553248544E-07" ixz="1.81410096406909E-13"
+               iyy="3.82810606265668E-07" iyz="-2.8469873122496E-14" izz="4.23364008432305E-07" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/right_front_knuckle.STL" />
+        <mesh filename="package://adas_robot_description/meshes/right_front_knuckle.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/right_front_knuckle.STL" />
+        <mesh filename="package://adas_robot_description/meshes/right_front_knuckle.STL" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="rightfrontknuckle"
-    type="continuous">
-    <origin
-      xyz="0.169328589654865 -0.115758525496169 -0.0289999999484927"
-      rpy="0 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="right_front_knuckle" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      effort="10"
-      velocity="10" />
-    <dynamics
-      damping="0.1"
-      friction="0.1" />
+
+  <joint name="rightfrontknuckle" type="continuous">
+    <origin xyz="0.169328589654865 -0.115758525496169 -0.0289999999484927" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="right_front_knuckle" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" />
+    <dynamics damping="0.1" friction="0.1" />
   </joint>
-  <link
-    name="right_front">
+
+  <link name="right_front">
     <inertial>
-      <origin
-        xyz="0.0117938008072664 1.35946038248846E-06 0.00930811369012874"
-        rpy="0 0 0" />
-      <mass
-        value="0.126363111272" />
-      <inertia
-        ixx="7.9428005805697E-05"
-        ixy="-8.02175722455012E-10"
-        ixz="5.66233699547274E-09"
-        iyy="7.94246568540842E-05"
-        iyz="-1.29616563650809E-09"
-        izz="0.00013565032153422" />
+      <origin xyz="0.0117938008072664 1.35946038248846E-06 0.00930811369012874" rpy="0 0 0" />
+      <mass value="0.126363111272" />
+      <inertia ixx="7.9428005805697E-05" ixy="-8.02175722455012E-10" ixz="5.66233699547274E-09"
+               iyy="7.94246568540842E-05" iyz="-1.29616563650809E-09" izz="0.00013565032153422" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/right_front.STL" />
+        <mesh filename="package://adas_robot_description/meshes/right_front.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/right_front.STL" />
+        <mesh filename="package://adas_robot_description/meshes/right_front.STL" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="rightfront"
-    type="continuous">
-    <origin
-      xyz="-0.0122405568200503 -0.0240265184642974 0"
-      rpy="-1.5707963267949 0 0" />
-    <parent
-      link="right_front_knuckle" />
-    <child
-      link="right_front" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      effort="10"
-      velocity="10" />
-    <dynamics
-      damping="0.1"
-      friction="0.1" />
+
+  <joint name="rightfront" type="continuous">
+    <origin xyz="-0.0122405568200503 -0.0240265184642974 0" rpy="-1.5707963267949 0 0" />
+    <parent link="right_front_knuckle" />
+    <child link="right_front" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" />
+    <dynamics damping="0.1" friction="0.1" />
   </joint>
-  <link
-    name="camera_link">
+
+  <link name="camera_link">
     <inertial>
-      <origin
-        xyz="-0.0135378287901173 -2.22044604925031E-16 -0.0353920751414981"
-        rpy="0 0 0" />
-      <mass
-        value="0.0206168866869791" />
-      <inertia
-        ixx="3.30124777543458E-05"
-        ixy="-1.10836983641972E-21"
-        ixz="-9.30896580437687E-06"
-        iyy="3.63405838134579E-05"
-        iyz="2.79301204906822E-20"
-        izz="7.02199919189421E-06" />
+      <origin xyz="-0.0135378287901173 -2.22044604925031E-16 -0.0353920751414981" rpy="0 0 0" />
+      <mass value="0.0206168866869791" />
+      <inertia ixx="3.30124777543458E-05" ixy="-1.10836983641972E-21" ixz="-9.30896580437687E-06"
+               iyy="3.63405838134579E-05" iyz="2.79301204906822E-20" izz="7.02199919189421E-06" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/camera_link.STL" />
+        <mesh filename="package://adas_robot_description/meshes/camera_link.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/camera_link.STL" />
+        <mesh filename="package://adas_robot_description/meshes/camera_link.STL" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="cameralink"
-    type="fixed">
-    <origin
-      xyz="0.141101715153465 0 0.0795664425483641"
-      rpy="0 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="camera_link" />
-    <axis
-      xyz="0 0 0" />
+
+  <joint name="cameralink" type="fixed">
+    <origin xyz="0.141101715153465 0 0.0795664425483641" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="camera_link" />
+    <axis xyz="0 0 0" />
   </joint>
-  <link
-    name="tofL_link">
+
+  <link name="tofL_link">
     <inertial>
-      <origin
-        xyz="0.000498097349045712 4.35778713738788E-05 1.11022302462516E-16"
-        rpy="0 0 0" />
-      <mass
-        value="0.000175927587113891" />
-      <inertia
-        ixx="6.68861872319417E-09"
-        ixy="4.69777437094648E-10"
-        ixz="-2.05957414480004E-23"
-        iyy="1.36013824667135E-09"
-        iyz="5.2400724399669E-23"
-        izz="5.44000214129389E-09" />
+      <origin xyz="0.000498097349045712 4.35778713738788E-05 1.11022302462516E-16" rpy="0 0 0" />
+      <mass value="0.000175927587113891" />
+      <inertia ixx="6.68861872319417E-09" ixy="4.69777437094648E-10" ixz="-2.05957414480004E-23"
+               iyy="1.36013824667135E-09" iyz="5.2400724399669E-23" izz="5.44000214129389E-09" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/tofL_link.STL" />
+        <mesh filename="package://adas_robot_description/meshes/tofL_link.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/tofL_link.STL" />
+        <mesh filename="package://adas_robot_description/meshes/tofL_link.STL" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="tofLlink"
-    type="fixed">
-    <origin
-      xyz="0.209266648376749 0.0478158555869712 -0.0270000000000002"
-      rpy="0 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="tofL_link" />
-    <axis
-      xyz="0 0 0" />
+
+  <joint name="tofLlink" type="fixed">
+    <origin xyz="0.209266648376749 0.0478158555869712 -0.0270000000000002" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="tofL_link" />
+    <axis xyz="0 0 0" />
   </joint>
-  <link
-    name="tofR_link">
+
+  <link name="tofR_link">
     <inertial>
-      <origin
-        xyz="0.000498097349045268 -4.35778713743229E-05 -1.11022302462516E-16"
-        rpy="0 0 0" />
-      <mass
-        value="0.000175927587113894" />
-      <inertia
-        ixx="6.68861872319439E-09"
-        ixy="-4.69777437094656E-10"
-        ixz="-1.47027895515092E-23"
-        iyy="1.36013824667135E-09"
-        iyz="1.83646818735447E-24"
-        izz="5.44000214129411E-09" />
+      <origin xyz="0.000498097349045268 -4.35778713743229E-05 -1.11022302462516E-16" rpy="0 0 0" />
+      <mass value="0.000175927587113894" />
+      <inertia ixx="6.68861872319439E-09" ixy="-4.69777437094656E-10" ixz="-1.47027895515092E-23"
+               iyy="1.36013824667135E-09" iyz="1.83646818735447E-24" izz="5.44000214129411E-09" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/tofR_link.STL" />
+        <mesh filename="package://adas_robot_description/meshes/tofR_link.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/tofR_link.STL" />
+        <mesh filename="package://adas_robot_description/meshes/tofR_link.STL" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="tofRlink"
-    type="fixed">
-    <origin
-      xyz="0.209266648376749 -0.0478158555869701 -0.0270000000000002"
-      rpy="0 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="tofR_link" />
-    <axis
-      xyz="0 0 0" />
+
+  <joint name="tofRlink" type="fixed">
+    <origin xyz="0.209266648376749 -0.0478158555869701 -0.0270000000000002" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="tofR_link" />
+    <axis xyz="0 0 0" />
   </joint>
-  <link
-    name="lidar_link">
+
+  <link name="lidar_link">
     <inertial>
-      <origin
-        xyz="0.00249999999999984 0 0"
-        rpy="0 0 0" />
-      <mass
-        value="0.00149999999999999" />
-      <inertia
-        ixx="7.81249999999993E-08"
-        ixy="1.50724988651505E-24"
-        ixz="6.72032824314455E-25"
-        iyy="3.12499999999995E-08"
-        iyz="4.41264111722594E-24"
-        izz="5.31249999999998E-08" />
+      <origin xyz="0.00249999999999984 0 0" rpy="0 0 0" />
+      <mass value="0.00149999999999999" />
+      <inertia ixx="7.81249999999993E-08" ixy="1.50724988651505E-24" ixz="6.72032824314455E-25"
+               iyy="3.12499999999995E-08" iyz="4.41264111722594E-24" izz="5.31249999999998E-08" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/lidar_link.STL" />
+        <mesh filename="package://adas_robot_description/meshes/lidar_link.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://adas_robot_description/meshes/lidar_link.STL" />
+        <mesh filename="package://adas_robot_description/meshes/lidar_link.STL" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="lidarlink"
-    type="fixed">
-    <origin
-      xyz="0.210387890453994 0 -0.0270000000000002"
-      rpy="0 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="lidar_link" />
-    <axis
-      xyz="0 0 0" />
+
+  <joint name="lidarlink" type="fixed">
+    <origin xyz="0.210387890453994 0 -0.0270000000000002" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="lidar_link" />
+    <axis xyz="0 0 0" />
   </joint>
+
+  <!-- ========== GAZEBO SENSOR PLUGINS ========== -->
+
+  <!-- TF-Luna centre (lidar_link) - 0.2m to 8m - ACC + AEB primary -->
+  <gazebo reference="lidar_link">
+    <sensor name="tfluna_sensor" type="gpu_ray">
+      <update_rate>30</update_rate>
+      <topic>/tof_front</topic>
+      <gz_frame_id>lidar_link</gz_frame_id>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>1</samples>
+            <resolution>1</resolution>
+            <min_angle>0</min_angle>
+            <max_angle>0</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.2</min>
+          <max>8.0</max>
+          <resolution>0.001</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.005</stddev>
+        </noise>
+      </ray>
+    </sensor>
+  </gazebo>
+
+  <!-- VL53L1X Left (tofL_link) - 0.01m to 4m - side/parking -->
+  <gazebo reference="tofL_link">
+    <sensor name="vl53_left_sensor" type="gpu_ray">
+      <update_rate>30</update_rate>
+      <topic>/tof_left</topic>
+      <gz_frame_id>tofL_link</gz_frame_id>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>1</samples>
+            <resolution>1</resolution>
+            <min_angle>0</min_angle>
+            <max_angle>0</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.01</min>
+          <max>4.0</max>
+          <resolution>0.001</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.003</stddev>
+        </noise>
+      </ray>
+    </sensor>
+  </gazebo>
+
+  <!-- VL53L1X Right (tofR_link) - 0.01m to 4m - side/parking -->
+  <gazebo reference="tofR_link">
+    <sensor name="vl53_right_sensor" type="gpu_ray">
+      <update_rate>30</update_rate>
+      <topic>/tof_right</topic>
+      <gz_frame_id>tofR_link</gz_frame_id>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>1</samples>
+            <resolution>1</resolution>
+            <min_angle>0</min_angle>
+            <max_angle>0</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.01</min>
+          <max>4.0</max>
+          <resolution>0.001</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.003</stddev>
+        </noise>
+      </ray>
+    </sensor>
+  </gazebo>
+
+  <!-- IMX219 Camera (camera_link) - 79.3 degree FOV - LKA + signs + ACC visual -->
+  <gazebo reference="camera_link">
+    <sensor name="camera_sensor" type="camera">
+      <update_rate>30</update_rate>
+      <topic>/camera/image_raw</topic>
+      <gz_frame_id>camera_link</gz_frame_id>
+      <camera>
+        <horizontal_fov>1.3849</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+    </sensor>
+  </gazebo>
+
+  <!-- Wheel friction for realistic driving -->
+  <gazebo reference="left_rear">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+
+  <gazebo reference="right_rear">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+
+  <gazebo reference="left_front">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+
+  <gazebo reference="right_front">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+
 </robot>
